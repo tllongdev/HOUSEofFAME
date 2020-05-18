@@ -1,4 +1,6 @@
 import React from 'react'
+import ReactDom from 'react-dom'
+import { useSpring, animated } from 'react-spring'
 import Navbar from './components/Navbar'
 import logo from './HouseOfFameLogoWHT.svg'
 import './App.css'
