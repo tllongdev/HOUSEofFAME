@@ -1,0 +1,170 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	min-height: 8vh;
+	background: rgba(0, 0, 0, 0);
+	font-size: 12px;
+}
+
+.navbar header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 3rem;
+}
+
+.navbar ul {
+	display: flex;
+	list-style: none;
+	padding: 0.5rem;
+}
+
+.navbar ul li {
+	padding: 0 1rem;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #f4f4f4;
+	position: relative;
+	padding: 4px 0;
+}
+
+.navbar ul li a:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	background: #f4f4f4;
+	transition: width 0.3s ease 0.1s, left 0.3s ease 0.1s;
+	width: 0;
+}
+.navbar ul li a:hover:after {
+	width: 100%;
+	left: 0;
+}
+
+.Nav-logo {
+	width: 12rem;
+}
+
+.mcdondals {
+	display: none;
+	cursor: crosshair;
+	z-index: 1;
+}
+
+.mcdondals div {
+	width: 22px;
+	height: 2px;
+	margin: 6px;
+	background-color: #f4f4f4;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+	.navbar header {
+		padding: 1rem;
+	}
+
+	.navbar ul {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.2);
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		width: 33.3%;
+		padding-top: 4rem;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.navbar ul li {
+		padding: 1rem;
+		font-size: 14px;
+		/* opacity: 0; */
+	}
+
+	.mcdondals {
+		display: block;
+	}
+
+	.nav-active {
+		transform: translateX(0%) !important;
+	}
+}
+
+/* React Legacy CSS */
+
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	width: 96vw;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin 9s linear;
+	}
+}
+
+.App-header {
+	background-color: #1b1b1b;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+@keyframes App-logo-spin {
+	/* from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate3d(1, 8, -1, 30deg);
+	} */
+	from {
+		transform: rotate3d(-1, 9, -1, 30deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+/* Mouse Parallax */
+
+#container {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide {
+	display: block;
+	position: absolute;
+}
