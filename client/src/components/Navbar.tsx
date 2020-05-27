@@ -4,6 +4,7 @@ import '../App.css'
 
 export default function Navbar() {
 	const [menuActive, setMenuState] = useState(false)
+
 	return (
 		<nav className='navbar'>
 			<header>

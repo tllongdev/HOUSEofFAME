@@ -1,30 +1,36 @@
-import React from 'react'
-import ReactDom from 'react-dom'
-import { useSpring, animated } from 'react-spring'
+import React, { useState, useRef, useLayoutEffect } from 'react'
 import Navbar from './components/Navbar'
-import logo from './HouseOfFameLogoWHT.svg'
+import LaunchPage from './pages/LaunchPage'
 import './App.css'
+import flier from './HOFFASHIONflier.jpg'
 
-// import Parallax from 'parallax-js'
+// (function useDimensions() {
+// 	const ref = useRef<HTMLBRElement>(null)
+// 	const [dimensions, setDimensions] = useState({})
+// 	useLayoutEffect(() => {
+// 		(ref.current) && setDimensions(ref.current.getBoundingClientRect().toJSON())
+// 	}, [ref.current])
+
+// 	return [ref, dimensions]
+// }())
 
 function App() {
-	// const scene = document.getElementById('scene')
-	// const parallaxInstance = new Parallax(scene, {
-	// 	relativeInput: true,
-	// })
-	// parallaxInstance.friction(0.2, 0.2)
 	return (
 		<>
-			<Navbar />
-			<div className='App' id='scene'>
-				<header
-					data-relative-input='true'
-					data-depth='0.2'
-					className='App-header'
-					id='container'
-				>
-					<img src={logo} className='App-logo slide' alt='logo' />
-				</header>
+			{/* <div>
+				<Navbar />
+			</div> */}
+			<div className='App'>
+				<div>
+					<img
+						className='flier'
+						src={flier}
+						alt='SATURDAY. MAY 30TH. 1PM California'
+					/>
+				</div>
+				<div>
+					<LaunchPage />
+				</div>
 			</div>
 		</>
 	)

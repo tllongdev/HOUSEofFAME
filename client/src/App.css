@@ -4,13 +4,21 @@
 	box-sizing: border-box;
 }
 
+.flier {
+	height: auto;
+	width: 92vw;
+	margin-top: 1vh;
+}
+
+/* Navbar */
+
 .navbar {
 	position: fixed;
 	top: 0;
 	z-index: 1;
 	width: 100%;
 	min-height: 8vh;
-	background: rgba(0, 0, 0, 0);
+	background: rgba(0, 0, 0, 0.963);
 	font-size: 12px;
 }
 
@@ -85,7 +93,7 @@
 		top: 0px;
 		right: 0px;
 		height: 100vh;
-		background-color: rgba(0, 0, 0, 0.2);
+		background-color: rgba(0, 0, 0, 0.4);
 		display: flex;
 		flex-direction: column;
 		align-items: left;
@@ -139,12 +147,6 @@
 }
 
 @keyframes App-logo-spin {
-	/* from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate3d(1, 8, -1, 30deg);
-	} */
 	from {
 		transform: rotate3d(-1, 9, -1, 30deg);
 	}
